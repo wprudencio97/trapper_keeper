@@ -5,6 +5,10 @@ body{
 .nav-color{
     background-color: #f3c623;
 }
+.custom-card{
+    max-width: 800px;
+    margin: auto;
+}
 .content-card{
     background-color: #ffffff;
     color: #10375c;

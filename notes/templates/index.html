@@ -3,14 +3,16 @@
 {% block content %}
 <div class="container">
   <h1 class="title">Notes</h1>
-  <div class="row">
+  <div class="row row-cols-1 row-cols-md-3">
     {% for note in notes %}
-    <div class="col-md-4">
-      <div class="content-card">
-        <h4>{{ note.note_title }}</h4>
-        <small>{{ note.date_created }}</small>
-        <hr>
-        <p>{{ note.note_content }}</p>
+    <div class="col mb-4">
+      <div class="card border-secundary h-100">
+        <div class="card-header">
+          <a href="{% url 'note-detail' note.id %}">{{ note.note_title }}</a>
+        </div>
+        <div class="card-body text-secondary">
+          <p class="card-text">{{ note.note_content|truncatechars:100 }}.</p>
+        </div>
       </div>
     </div>
     {% endfor %}
