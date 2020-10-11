@@ -1,0 +1,19 @@
+body{
+    background-color: #f4f6ff;
+}
+
+.nav-color{
+    background-color: #f3c623;
+}
+.content-card{
+    background-color: #ffffff;
+    color: #10375c;
+    padding: 10px 20px 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.title{
+    text-align: center;
+    padding-bottom: 10px;
+}

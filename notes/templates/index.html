@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1 class="title">Notes</h1>
+  <div class="row">
+    {% for note in notes %}
+    <div class="col-md-4">
+      <div class="content-card">
+        <h4>{{ note.note_title }}</h4>
+        <small>{{ note.date_created }}</small>
+        <hr>
+        <p>{{ note.note_content }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
