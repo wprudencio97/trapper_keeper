@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\William\\.virtualenvs\\trapper_keeper-BO6wCvP3\\Scripts\\python.exe",
+    "python.pythonPath": "/home/william/.local/share/virtualenvs/trapper_keeper-iCq7pWpL/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }

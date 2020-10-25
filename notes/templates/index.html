@@ -11,7 +11,7 @@
           <a href="{% url 'note-detail' note.id %}">{{ note.note_title }}</a>
         </div>
         <div class="card-body text-secondary">
-          <p class="card-text">{{ note.note_content|truncatechars:100 }}.</p>
+          <p class="card-text">{{ note.note_content|safe|truncatechars:100 }}.</p>
         </div>
       </div>
     </div>
