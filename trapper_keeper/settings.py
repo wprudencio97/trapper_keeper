@@ -26,7 +26,7 @@ SECRET_KEY = '9&d@ns93*3-6ydc_m!uk-=)dd65f^iahmm_r6^#we0$2y50+)c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-trapper-keeper.herokuapp.com']
 
 
 # Application definition

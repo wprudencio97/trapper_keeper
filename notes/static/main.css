@@ -17,6 +17,11 @@ body{
     margin-bottom: 15px;
 }
 
+.card-content img{
+    max-width: 100%;
+    height: auto!important;
+}
+
 .title{
     text-align: center;
     padding-bottom: 10px;

@@ -8,7 +8,7 @@
                 <h1 class="title">{{object.note_title}}</h1>
             </div>
             <div class="card-body">
-                <p>{{ object.note_content|safe }}</p>
+                <div class="card-content">{{ object.note_content|safe }}</div>
             </div>
             <div class="card-footer">
                 {{ object.date_created }}
