@@ -26,7 +26,7 @@ SECRET_KEY = '9&d@ns93*3-6ydc_m!uk-=)dd65f^iahmm_r6^#we0$2y50+)c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-trapper-keeper.herokuapp.com']
+ALLOWED_HOSTS = ['django-trapper-keeper.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,9 +123,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
