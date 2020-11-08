@@ -33,7 +33,9 @@ ALLOWED_HOSTS = ['django-trapper-keeper.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor_uploader',
     'notes',
+    'storages',
     'crispy_forms',
     'ckeditor',
     'django.contrib.admin',
@@ -139,5 +141,22 @@ CKEDITOR_CONFIGS = {
         'width': '100%',
     },
 }
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+AWS_S3_CUSTOM_DOMAIN = "django-blog-strg.s3.amazonaws.com"
+AWS_QUERYSTRING_AUTH = False
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 django_heroku.settings(locals())

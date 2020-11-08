@@ -2,12 +2,13 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Note(models.Model):
     note_title = models.CharField(max_length=50)
     #note_content = models.TextField()
-    note_content = RichTextField(blank=True, null=True)
+    note_content = RichTextUploadingField(blank=True, null=True)
     date_created = models.DateField(default=timezone.now)
 
     def __str__(self):
