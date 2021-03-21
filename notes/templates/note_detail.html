@@ -3,17 +3,19 @@
 {% block content %}
 <div class="container">
     <div class="custom-card">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'notes' %}" class="text-dark">Notes</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{object.note_title}}</li>
+            </ol>
+        </nav>
         <div class="card">
-            <div class="card-header">
-                <h1 class="title">{{object.note_title}}</h1>
-            </div>
             <div class="card-body">
+                <h1 class="card-title">{{object.note_title}}</h1>
                 <div class="card-content">{{ object.note_content|safe }}</div>
-            </div>
-            <div class="card-footer">
-                {{ object.date_created }}
+                <small>{{ object.date_created }}</small><br>      
                 <a class="btn btn-outline-secondary btn-sm" href="{% url 'note-update' object.id %}">Edit</a>
-                <a class="btn btn-outline-danger btn-sm" href="{% url 'note-delete' object.id %}">Delete</a>
+                <a class="btn btn-outline-danger btn-sm" href="{% url 'note-delete' object.id %}">Delete</a>   
             </div>
         </div>
     </div>

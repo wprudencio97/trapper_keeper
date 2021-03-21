@@ -19,17 +19,17 @@ class NoteDeleteView(DeleteView):
     model = Note
     success_url = '/'
 
-def index(request):
+def notes(request):
     if request.method == 'POST':
         form = NoteForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('index')
+        return redirect('notes')
     else:
         form = NoteForm()
-        notes = Note.objects.all
+        notes = Note.objects.all().order_by('-date_created')
         context = {
             'notes':notes,
             'form':form
         }
-    return render(request, 'index.html', context)
+    return render(request, 'notes.html', context)

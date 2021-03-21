@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="card-columns">
+    {% for note in notes %}
+      <div class="card zoom-card mb-4">  
+          <div class="card-body text-secondary">
+            <h3 class="note-title"><a href="{% url 'note-detail' note.id %}" class="text-dark">{{ note.note_title }}</a></h1>
+            <div class="card-content">{{ note.note_content|safe|truncatechars_html:100 }}</div>
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

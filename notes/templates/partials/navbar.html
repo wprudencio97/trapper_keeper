@@ -1,19 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark nav-color fixed-top">
     <div class="container">
-        <a class="navbar-brand mr-4" href="{% url 'index' %}">Trapper Keeper</a>
+        <a class="navbar-brand mr-4" href="{% url 'notes' %}"><i class="fas fa-sticky-note"></i> Trapper Keeper</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
             aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="#">About</a>
-            </div>
             {% if 'note' not in request.path %}
             <!-- Navbar Right Side -->
-            <div class="navbar-nav">
+            <div class="navbar-nav ml-auto">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#exampleModal">
                     New Note
                 </button>
             </div>

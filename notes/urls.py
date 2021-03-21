@@ -10,7 +10,7 @@ urlpatterns = [
     path('note/update/<int:pk>', NoteUpdateView.as_view(), name='note-update'),
     path('note/detail/<int:pk>', NoteDetailView.as_view(), name='note-detail'),
     path('note/delete/<int:pk>', NoteDeleteView.as_view(), name='note-delete'),
-    path('', views.index, name='index'),
+    path('', views.notes, name='notes'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

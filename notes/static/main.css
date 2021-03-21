@@ -6,23 +6,40 @@ body{
     background-color: #f3c623;
 }
 .custom-card{
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
-.content-card{
-    background-color: #ffffff;
-    color: #10375c;
-    padding: 10px 20px 5px 20px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
 .card-content img{
     max-width: 100%;
     height: auto!important;
 }
+.zoom-card{
+    transition: transform .2s; 
+}
+.zoom-card:hover{
+    transform: scale(1.02); 
+}
 
-.title{
-    text-align: center;
-    padding-bottom: 10px;
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+  
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+  
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 3;
+    }
 }
